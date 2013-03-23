@@ -1,0 +1,24 @@
+{
+    "name":"shionsan",
+    "version":"0.1",
+    "manifest_version":2,
+
+    "description":"かわいいね、君は。dsbd上、JKLTで音が出ます",
+
+    "background":{
+        "scripts":[
+            "jquery-1.9.1.min.js",
+            "background.js"
+        ]
+    },
+
+    "permissions":[
+        "http://www.tumblr.com/dashboard"
+    ],
+    "content_scripts":[
+        {
+            "matches":["http://www.tumblr.com/dashboard"],
+            "js":["jquery-1.9.1.min.js","jquery.ba-throttle-debounce.min.js","content.js"]
+        }
+    ]
+}
